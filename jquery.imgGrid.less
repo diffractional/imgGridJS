@@ -1,0 +1,53 @@
+/*
+//Enable Clearfix on your site, as there are floating elements
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+*/
+
+
+.img-grid{
+	display: block;
+	position: relative;
+	width: 49%;
+	float: left;
+	height: 150px;
+	overflow: hidden;
+	text-align: center;
+	margin-top: 2%;
+
+	&.even{
+		margin-right: 2%;
+	}
+
+	img{
+		position: absolute;
+		top: 0;
+		left: -50%;
+		display: inline-block;
+		text-align: center;
+		height: 150px;
+	}
+	&.full{
+		width: 100%;
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			text-align: center;
+			height: 150px;
+		}
+	}
+}
